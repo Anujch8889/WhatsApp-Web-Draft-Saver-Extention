@@ -1,0 +1,10 @@
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore build artifacts
+*.zip
+*.crx
+
+# Ignore icon generator helper
+icons/generate_icons.html

@@ -1,84 +1,29 @@
-# WhatsApp Web Draft Saver - Chrome Extension
+# WhatsApp Web Draft Saver Extension
 
-🔄 Automatically save and restore message drafts in WhatsApp Web. Per-chat memory, 100% local storage, privacy-friendly.
+A privacy-focused Chrome extension that automatically saves and restores message drafts in WhatsApp Web. Never lose a drafted message again!
 
-## ✨ Features
+## Features
 
-| Feature | Description |
-|---------|-------------|
-| 🔄 **Auto Draft Save** | Automatically saves text as you type |
-| 📂 **Per-Chat Memory** | Separate drafts for each contact/group |
-| 🔒 **100% Local** | Uses `chrome.storage.local` only - no servers |
-| 🧹 **Auto Clear** | Clears draft when message is sent |
-| 🎛️ **Toggle Control** | Enable/disable via popup switch |
-| ⚙️ **Settings Panel** | Customize delay, view stats, restore options |
+- **✍️ Auto-save Drafts**: Automatically saves text as you type.
+- **📂 Per-Chat Memory**: Maintains separate drafts for each contact or group.
+- **🔒 100% Local**: Uses `chrome.storage.local` exclusively. No data leaves your browser.
+- **🧹 Auto-Clear**: Automatically clears the draft when you send the message.
+- **🎛️ Easy Toggle**: simple ON/OFF switch in the popup.
+- **⚙️ Configurable**: Customize auto-save delay and restore behavior.
 
-## 🚀 Installation
+## Installation
 
-### From Chrome Web Store
-*(Coming soon)*
+1. Download the extension ZIP file (or clone this repo).
+2. Unzip the file.
+3. Open Chrome and navigate to `chrome://extensions/`.
+4. Enable **Developer mode** in the top right.
+5. Click **Load unpacked**.
+6. Select the extension folder.
 
-### Manual Installation (Developer Mode)
-1. Download or clone this repository
-2. Open Chrome and go to `chrome://extensions/`
-3. Enable **Developer mode** (toggle in top right)
-4. Click **Load unpacked**
-5. Select the extension folder
-6. Done! The extension icon will appear in your toolbar
+## Privacy Policy
 
-## 📖 How to Use
+This extension does not collect, store, or transmit any user data to external servers. All drafts are stored locally on your device using the Chrome Storage API and are automatically cleared when sent or manually deleted by the user.
 
-1. **Open WhatsApp Web** - Go to `web.whatsapp.com`
-2. **Start typing** - Your draft is automatically saved
-3. **Switch chats** - Each chat has its own draft
-4. **Refresh the page** - Your draft is restored!
-5. **Send a message** - Draft is automatically cleared
+## License
 
-## ⚙️ Settings
-
-Click the ⚙️ Settings link in the popup to:
-- **Adjust auto-save delay** (500ms - 3000ms)
-- **View saved draft count**
-- **Clear all drafts**
-- **Toggle smart restore options**
-
-## 🔒 Privacy
-
-- ✅ **No server communication** - All data stays in your browser
-- ✅ **chrome.storage.local** - Encrypted by Chrome
-- ✅ **No tracking** - Zero analytics or data collection
-- ✅ **Minimal permissions** - Only what's needed
-- ✅ **Open source** - Easy to audit
-
-## 📁 File Structure
-
-```
-WhatsApp Web Draft Saver/
-├── manifest.json      # Extension configuration
-├── background.js      # Service worker
-├── content.js         # WhatsApp Web integration
-├── popup.html/css/js  # Extension popup UI
-├── settings.html/css/js # Settings page
-└── icons/             # Extension icons
-```
-
-## 🛠️ Development
-
-Built with vanilla JavaScript - no frameworks needed!
-
-### Permissions Used
-- `storage` - Save drafts locally
-- `activeTab` - Interact with WhatsApp Web tab
-- `host_permissions` - Access `web.whatsapp.com`
-
-## 📜 License
-
-MIT License - Feel free to use and modify!
-
-## 🤝 Contributing
-
-Pull requests are welcome! For major changes, please open an issue first.
-
----
-
-Made with ❤️ for WhatsApp Web users
+MIT

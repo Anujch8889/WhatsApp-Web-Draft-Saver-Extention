@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Icon Generator</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+            background: #f0f0f0;
+        }
+
+        canvas {
+            border: 1px solid #ccc;
+            margin: 10px;
+            background: white;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .icon-box {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>WhatsApp Draft Saver Icons</h2>
+    <p>Right-click each canvas and "Save Image As" with the correct filename.</p>
+    <div class="container">
+        <div class="icon-box">
+            <canvas id="icon16" width="16" height="16"></canvas>
+            <p>icon16.png</p>
+        </div>
+        <div class="icon-box">
+            <canvas id="icon48" width="48" height="48"></canvas>
+            <p>icon48.png</p>
+        </div>
+        <div class="icon-box">
+            <canvas id="icon128" width="128" height="128"></canvas>
+            <p>icon128.png</p>
+        </div>
+    </div>
+
+    <script>
+        function drawIcon(canvasId, size) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+            const scale = size / 128;
+
+            // Clear
+            ctx.clearRect(0, 0, size, size);
+
+            // Background circle
+            ctx.beginPath();
+            ctx.arc(size / 2, size / 2, size / 2 - 2 * scale, 0, Math.PI * 2);
+            ctx.fillStyle = '#25D366';
+            ctx.fill();
+
+            // Chat bubble
+            ctx.save();
+            ctx.translate(size * 0.25, size * 0.22);
+            ctx.scale(scale, scale);
+
+            ctx.beginPath();
+            ctx.arc(32, 32, 28, 0, Math.PI * 2);
+            ctx.fillStyle = 'white';
+            ctx.fill();
+
+            // Bubble tail
+            ctx.beginPath();
+            ctx.moveTo(8, 48);
+            ctx.lineTo(0, 64);
+            ctx.lineTo(20, 52);
+            ctx.fillStyle = 'white';
+            ctx.fill();
+            ctx.restore();
+
+            // Pencil
+            ctx.save();
+            ctx.translate(size * 0.4, size * 0.35);
+            ctx.scale(scale * 0.7, scale * 0.7);
+
+            // Pencil body
+            ctx.beginPath();
+            ctx.moveTo(0, 28);
+            ctx.lineTo(20, 8);
+            ctx.lineTo(28, 16);
+            ctx.lineTo(8, 36);
+            ctx.closePath();
+            ctx.fillStyle = '#25D366';
+            ctx.fill();
+
+            // Pencil tip
+            ctx.beginPath();
+            ctx.moveTo(0, 28);
+            ctx.lineTo(-4, 40);
+            ctx.lineTo(8, 36);
+            ctx.closePath();
+            ctx.fillStyle = '#128C7E';
+            ctx.fill();
+
+            // Pencil top
+            ctx.beginPath();
+            ctx.moveTo(20, 8);
+            ctx.lineTo(26, 2);
+            ctx.lineTo(34, 10);
+            ctx.lineTo(28, 16);
+            ctx.closePath();
+            ctx.fillStyle = '#0a5c4a';
+            ctx.fill();
+
+            ctx.restore();
+        }
+
+        drawIcon('icon16', 16);
+        drawIcon('icon48', 48);
+        drawIcon('icon128', 128);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,366 @@
+/* WhatsApp Draft Saver - Settings Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-width: 360px;
+    max-width: 500px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+.settings-container {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+    padding: 16px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.back-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    text-decoration: none;
+    color: #ffffff;
+    transition: all 0.2s ease;
+}
+
+.back-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+.back-icon {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.header-title {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+/* Main Content */
+.main-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Settings Sections */
+.settings-section {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 16px;
+    background: rgba(255, 255, 255, 0.03);
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.section-icon {
+    font-size: 16px;
+}
+
+/* Setting Items */
+.setting-item {
+    padding: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.setting-item:last-child {
+    border-bottom: none;
+}
+
+.setting-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 12px;
+}
+
+.setting-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.setting-description {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Slider */
+.slider-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+input[type="range"] {
+    flex: 1;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.1);
+}
+
+.slider-value {
+    min-width: 40px;
+    text-align: right;
+    font-size: 14px;
+    font-weight: 600;
+    color: #25d366;
+}
+
+/* Stats Item */
+.stats-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.stats-item .setting-info {
+    margin-bottom: 0;
+}
+
+.draft-count-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 36px;
+    height: 36px;
+    padding: 0 12px;
+    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+    border-radius: 18px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/* Danger Button */
+.danger-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 12px 16px;
+    background: rgba(255, 107, 107, 0.15);
+    border: 1px solid rgba(255, 107, 107, 0.3);
+    border-radius: 10px;
+    color: #ff6b6b;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.danger-btn:hover {
+    background: rgba(255, 107, 107, 0.25);
+    border-color: rgba(255, 107, 107, 0.5);
+}
+
+.danger-btn:active {
+    transform: scale(0.98);
+}
+
+.btn-icon {
+    font-size: 16px;
+}
+
+/* Checkbox Items */
+.checkbox-item {
+    padding: 12px 16px;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.checkbox-wrapper input {
+    display: none;
+}
+
+.checkmark {
+    width: 22px;
+    height: 22px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.checkbox-wrapper input:checked+.checkmark {
+    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+    border-color: #25d366;
+}
+
+.checkmark::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    font-size: 14px;
+    color: #ffffff;
+    transition: transform 0.2s ease;
+}
+
+.checkbox-wrapper input:checked+.checkmark::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.checkbox-label {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* About Section */
+.about-section .section-title {
+    border-bottom: none;
+}
+
+.about-content {
+    padding: 0 16px 16px;
+    text-align: center;
+}
+
+.about-text {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 4px;
+}
+
+.about-subtext {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Toast Notification */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background: rgba(37, 211, 102, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+.toast.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
+.toast-icon {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.toast-message {
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.settings-container {
+    animation: fadeIn 0.3s ease;
+}
+
+.settings-section {
+    animation: fadeIn 0.4s ease backwards;
+}
+
+.settings-section:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.settings-section:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.settings-section:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.settings-section:nth-child(4) {
+    animation-delay: 0.4s;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - WhatsApp Draft Saver</title>
+    <link rel="stylesheet" href="settings.css">
+</head>
+
+<body>
+    <div class="settings-container">
+        <!-- Header -->
+        <header class="header">
+            <a href="#" class="back-btn" id="backBtn">
+                <span class="back-icon">←</span>
+            </a>
+            <h1 class="header-title">Settings</h1>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Draft Settings Section -->
+            <section class="settings-section">
+                <h2 class="section-title">
+                    <span class="section-icon">⏱</span>
+                    Draft Settings
+                </h2>
+                <div class="setting-item">
+                    <div class="setting-info">
+                        <span class="setting-label">Auto-save delay</span>
+                        <span class="setting-description">Save draft after typing stops</span>
+                    </div>
+                    <div class="slider-wrapper">
+                        <input type="range" id="delaySlider" min="500" max="3000" step="100" value="1000">
+                        <span class="slider-value" id="delayValue">1.0s</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Storage Section -->
+            <section class="settings-section">
+                <h2 class="section-title">
+                    <span class="section-icon">💾</span>
+                    Storage
+                </h2>
+                <div class="setting-item stats-item">
+                    <div class="setting-info">
+                        <span class="setting-label">Saved Drafts</span>
+                        <span class="setting-description">Total drafts in storage</span>
+                    </div>
+                    <span class="draft-count-badge" id="draftCountBadge">0</span>
+                </div>
+                <div class="setting-item">
+                    <button class="danger-btn" id="clearAllBtn">
+                        <span class="btn-icon">🗑</span>
+                        <span class="btn-text">Clear All Drafts</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Smart Restore Section -->
+            <section class="settings-section">
+                <h2 class="section-title">
+                    <span class="section-icon">🔄</span>
+                    Smart Restore
+                </h2>
+                <div class="setting-item checkbox-item">
+                    <label class="checkbox-wrapper">
+                        <input type="checkbox" id="autoRestoreCheck" checked>
+                        <span class="checkmark"></span>
+                        <span class="checkbox-label">Restore drafts automatically</span>
+                    </label>
+                </div>
+                <div class="setting-item checkbox-item">
+                    <label class="checkbox-wrapper">
+                        <input type="checkbox" id="askBeforeRestoreCheck">
+                        <span class="checkmark"></span>
+                        <span class="checkbox-label">Ask before restoring</span>
+                    </label>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section class="settings-section about-section">
+                <h2 class="section-title">
+                    <span class="section-icon">ℹ️</span>
+                    About
+                </h2>
+                <div class="about-content">
+                    <p class="about-text">WhatsApp Draft Saver v1.0.0</p>
+                    <p class="about-subtext">100% local • Privacy-friendly • No data collection</p>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Toast Notification -->
+        <div class="toast" id="toast">
+            <span class="toast-icon">✔</span>
+            <span class="toast-message" id="toastMessage">Settings saved</span>
+        </div>
+    </div>
+
+    <script src="settings.js"></script>
+</body>
+
+</html>

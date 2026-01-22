@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WhatsApp Draft Saver</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">
+        <span class="logo-icon">💬</span>
+        <span class="logo-text">WhatsApp Draft Saver</span>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Toggle Section -->
+      <div class="toggle-section">
+        <label class="toggle-wrapper">
+          <input type="checkbox" id="enableToggle" checked>
+          <span class="toggle-slider"></span>
+        </label>
+        <div class="toggle-info">
+          <span class="toggle-status" id="toggleStatus">ON</span>
+          <span class="toggle-label">Auto Save Drafts</span>
+        </div>
+      </div>
+
+      <!-- Info Section -->
+      <div class="info-section">
+        <div class="info-item">
+          <span class="info-icon">✔</span>
+          <span class="info-text">Drafts saved locally</span>
+        </div>
+        <div class="info-item">
+          <span class="info-icon">✔</span>
+          <span class="info-text">No data sent anywhere</span>
+        </div>
+      </div>
+
+      <!-- Stats Section -->
+      <div class="stats-section">
+        <span class="stats-icon">📊</span>
+        <span class="stats-text"><span id="draftCount">0</span> drafts saved</span>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <a href="settings.html" class="settings-link" id="settingsBtn">
+        <span class="settings-icon">⚙</span>
+        <span class="settings-text">Settings</span>
+      </a>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

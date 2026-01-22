@@ -1,72 +1,84 @@
-# WhatsApp Web Draft Saver
+# WhatsApp Web Draft Saver - Chrome Extension
 
-A privacy-focused Chrome extension that automatically saves and restores message drafts in WhatsApp Web.
+🔄 Automatically save and restore message drafts in WhatsApp Web. Per-chat memory, 100% local storage, privacy-friendly.
 
 ## ✨ Features
 
-- 🔄 **Auto Draft Save** - Automatically saves text as you type
-- 📂 **Per-Chat Memory** - Separate drafts for each contact/group
-- 🔒 **100% Local Storage** - Uses `chrome.storage.local` only, no servers
-- 🧹 **Auto Clear on Send** - Clears draft when message is sent
-- 🎛️ **Toggle Control** - Enable/disable via popup switch
-- ⚙️ **Settings Panel** - Customize delay, view stats, restore options
+| Feature | Description |
+|---------|-------------|
+| 🔄 **Auto Draft Save** | Automatically saves text as you type |
+| 📂 **Per-Chat Memory** | Separate drafts for each contact/group |
+| 🔒 **100% Local** | Uses `chrome.storage.local` only - no servers |
+| 🧹 **Auto Clear** | Clears draft when message is sent |
+| 🎛️ **Toggle Control** | Enable/disable via popup switch |
+| ⚙️ **Settings Panel** | Customize delay, view stats, restore options |
 
-## 🔒 Privacy
-
-- ✅ No server communication - All data stays in your browser
-- ✅ No tracking or analytics
-- ✅ Minimal permissions - Only what's needed
-- ✅ Open source - Easy to audit
-
-## 📦 Installation
+## 🚀 Installation
 
 ### From Chrome Web Store
 *(Coming soon)*
 
-### Manual Installation
+### Manual Installation (Developer Mode)
 1. Download or clone this repository
-2. Open `chrome://extensions/` in Chrome
-3. Enable "Developer mode" (top right)
-4. Click "Load unpacked"
+2. Open Chrome and go to `chrome://extensions/`
+3. Enable **Developer mode** (toggle in top right)
+4. Click **Load unpacked**
 5. Select the extension folder
+6. Done! The extension icon will appear in your toolbar
 
-## 🎯 How to Use
+## 📖 How to Use
 
-1. **Enable the extension** - Click the extension icon and toggle ON
-2. **Type in WhatsApp Web** - Your drafts are automatically saved
-3. **Switch chats** - Each chat remembers its own draft
-4. **Refresh or close** - Your drafts will be restored when you return
-5. **Send a message** - The draft is automatically cleared
+1. **Open WhatsApp Web** - Go to `web.whatsapp.com`
+2. **Start typing** - Your draft is automatically saved
+3. **Switch chats** - Each chat has its own draft
+4. **Refresh the page** - Your draft is restored!
+5. **Send a message** - Draft is automatically cleared
 
 ## ⚙️ Settings
 
-- **Auto-save delay** - Control how quickly drafts are saved (500ms - 3000ms)
-- **Clear all drafts** - Remove all saved drafts at once
-- **Smart restore** - Choose automatic or confirmation-based restore
+Click the ⚙️ Settings link in the popup to:
+- **Adjust auto-save delay** (500ms - 3000ms)
+- **View saved draft count**
+- **Clear all drafts**
+- **Toggle smart restore options**
 
-## 📁 Files
+## 🔒 Privacy
+
+- ✅ **No server communication** - All data stays in your browser
+- ✅ **chrome.storage.local** - Encrypted by Chrome
+- ✅ **No tracking** - Zero analytics or data collection
+- ✅ **Minimal permissions** - Only what's needed
+- ✅ **Open source** - Easy to audit
+
+## 📁 File Structure
 
 ```
 WhatsApp Web Draft Saver/
-├── manifest.json       # Extension configuration
-├── background.js       # Service worker
-├── content.js          # WhatsApp Web integration
-├── popup.html/css/js   # Extension popup UI
+├── manifest.json      # Extension configuration
+├── background.js      # Service worker
+├── content.js         # WhatsApp Web integration
+├── popup.html/css/js  # Extension popup UI
 ├── settings.html/css/js # Settings page
-└── icons/              # Extension icons
+└── icons/             # Extension icons
 ```
 
 ## 🛠️ Development
 
-This extension uses:
-- Chrome Extension Manifest V3
-- Vanilla JavaScript
-- `chrome.storage.local` API
+Built with vanilla JavaScript - no frameworks needed!
 
-## 📄 License
+### Permissions Used
+- `storage` - Save drafts locally
+- `activeTab` - Interact with WhatsApp Web tab
+- `host_permissions` - Access `web.whatsapp.com`
+
+## 📜 License
 
 MIT License - Feel free to use and modify!
 
 ## 🤝 Contributing
 
-Contributions are welcome! Feel free to open issues or submit pull requests.
+Pull requests are welcome! For major changes, please open an issue first.
+
+---
+
+Made with ❤️ for WhatsApp Web users
